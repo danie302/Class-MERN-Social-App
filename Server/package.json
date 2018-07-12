@@ -4,18 +4,14 @@
   "description": "Mern Social app ",
   "main": "index.js",
   "scripts": {
-    "client-install": "npm i --prefix client",
     "start": "node server.js",
-    "dev-serv": "nodemon src/index.js",
-    "dev-client": "npm start --prefix client",
-    "dev": "concurrently \"npm run dev-serv\" \"npm run dev-client\""
+    "dev": "nodemon src/index.js"
   },
   "author": "Daniel Daza",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-    "concurrently": "^3.6.0",
     "express": "^4.16.3",
     "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.3.0",
