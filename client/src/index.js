@@ -1,5 +1,14 @@
+// Dependecies
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/app";
+import { render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Components
+import AppRoutes from "./config/routes";
+
+render(
+  <Router>
+    <AppRoutes />
+  </Router>,
+  document.getElementById("root")
+);
