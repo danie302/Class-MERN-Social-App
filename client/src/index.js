@@ -2,13 +2,18 @@
 import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Provider } from "react-redux";
 
 // Components
 import AppRoutes from "./config/routes";
 
+import store from "./store";
+
 render(
-  <Router>
-    <AppRoutes />
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <AppRoutes />
+    </Router>
+  </Provider>,
   document.getElementById("root")
 );
