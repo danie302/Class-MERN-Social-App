@@ -16,6 +16,7 @@ class TextFieldGroup extends Component {
           value={this.props.value}
           placeholder={this.props.placeholder}
           onChange={this.props.onChange}
+          disabled={this.props.disabled}
         />
         {this.props.info && (
           <small className="form-text text-muted">{this.props.info}</small>
@@ -35,7 +36,8 @@ TextFieldGroup.propTypes = {
   info: PropTypes.string,
   error: PropTypes.string,
   type: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.string
 };
 
 TextFieldGroup.defaultProps = {
