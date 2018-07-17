@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import Spinner from "../common/spinner";
 import ProfileActions from "./profileActions";
 import Experience from "./experience";
+import Education from "./education";
 
 // Impport actions
 import {
@@ -41,6 +42,7 @@ class Dashboard extends Component {
             </p>
             <ProfileActions />
             <Experience experience={profile.experience} />
+            <Education education={profile.education} />
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}

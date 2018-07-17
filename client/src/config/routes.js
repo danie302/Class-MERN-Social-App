@@ -13,6 +13,7 @@ import CreateProfile from "../components/main/createProfile";
 import EditProfile from "../components/main/editProfile";
 import AddExperience from "../components/main/addExperience";
 import AddEducation from "../components/main/addEducation";
+import Profiles from "../components/profiles";
 
 const AppRoutes = () => (
   <App>
@@ -20,6 +21,7 @@ const AppRoutes = () => (
       <Route path="/" exact component={Home} />
       <Route path="/login" exact component={Login} />
       <Route path="/register" exact component={Register} />
+      <Route path="/profiles" exact component={Profiles} />
       <PrivateRoute path="/dashboard" exact component={Dashboard} />
       <PrivateRoute path="/create-profile" exact component={CreateProfile} />
       <PrivateRoute path="/edit-profile" exact component={EditProfile} />

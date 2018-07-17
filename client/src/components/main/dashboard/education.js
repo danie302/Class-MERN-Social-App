@@ -8,22 +8,22 @@ import { connect } from "react-redux";
 import isEmpty from "../../../utils/is-empty";
 
 // Impport actions
-import { deleteExperience } from "../../../actions/profileActions";
+import { deleteEducation } from "../../../actions/profileActions";
 
-class Experience extends Component {
+class Education extends Component {
   onDeleteClick(id) {
-    this.props.deleteExperience(id);
+    this.props.deleteEducation(id);
   }
   render() {
-    const experience = this.props.experience.map(exp => (
-      <tr key={exp._id}>
-        <td>{exp.company}</td>
-        <td>{exp.title}</td>
+    const education = this.props.education.map(edu => (
+      <tr key={edu._id}>
+        <td>{edu.school}</td>
+        <td>{edu.degree}</td>
         <td>
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment>
+          <Moment format="YYYY/MM/DD">{edu.from}</Moment>
           {"  -  "}
-          {!isEmpty(exp.to) ? (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+          {!isEmpty(edu.to) ? (
+            <Moment format="YYYY/MM/DD">{edu.to}</Moment>
           ) : (
             "Now"
           )}
@@ -31,7 +31,7 @@ class Experience extends Component {
         <td>
           <button
             className="btn btn-danger"
-            onClick={this.onDeleteClick.bind(this, exp._id)}
+            onClick={this.onDeleteClick.bind(this, edu._id)}
           >
             Delete
           </button>
@@ -40,28 +40,28 @@ class Experience extends Component {
     ));
     return (
       <div>
-        <h4 className="mb-4">Experience</h4>
+        <h4 className="mb-4">Education</h4>
         <table className="table">
           <thead>
             <tr>
-              <th>Company</th>
-              <th>Title</th>
+              <th>School</th>
+              <th>Degree</th>
               <th>Years</th>
               <th />
             </tr>
           </thead>
-          <tbody>{experience}</tbody>
+          <tbody>{education}</tbody>
         </table>
       </div>
     );
   }
 }
 
-Experience.propTypes = {
-  deleteExperience: PropTypes.func.isRequired
+Education.propTypes = {
+  deleteEducation: PropTypes.func.isRequired
 };
 
 export default connect(
   null,
-  { deleteExperience }
-)(Experience);
+  { deleteEducation }
+)(Education);

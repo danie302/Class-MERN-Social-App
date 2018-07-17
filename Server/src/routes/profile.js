@@ -53,7 +53,7 @@ router.get("/user/:user_id", (req, res) => {
 });
 
 // @route GET api/profile/all
-// @desc Get profile by ID
+// @desc Get all profiles
 // @access Public
 router.get("/all", (req, res) => {
   const errors = {};
