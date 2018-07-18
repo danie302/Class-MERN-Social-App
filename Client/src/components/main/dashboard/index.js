@@ -10,7 +10,7 @@ import ProfileActions from "./profileActions";
 import Experience from "./experience";
 import Education from "./education";
 
-// Impport actions
+// Import actions
 import {
   getCurrentProfile,
   deleteAccount
@@ -38,7 +38,8 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              Welcome{" "}
+              <Link to={`/profile/handle/${profile.handle}`}>{user.name}</Link>
             </p>
             <ProfileActions />
             <Experience experience={profile.experience} />

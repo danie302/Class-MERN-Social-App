@@ -154,7 +154,7 @@ router.post(
 // @desc Create comment
 // @access Private
 router.post(
-  "/",
+  "/comment/:id",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     const { errors, isValid } = validatePostInput(req.body);
